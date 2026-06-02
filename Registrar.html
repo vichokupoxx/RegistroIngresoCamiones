@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Registrar Ingreso</title>
+</head>
+<body>
+<!-- 🧭 NAVBAR -->
+    <nav class="navbar">
+    <div class="nav-left">
+        <strong>Registrar entrada Camiones</strong>
+        <a class="navbtn" href="Registrar.html">Registrar</a>
+        <a class="navbtn" href="Registros.html">Ver registros</a> 
+    </div>
+
+    <div class="nav-right">
+        <span id="userEmail"></span>
+        <button id="logout">Cerrar sesión</button>
+    </div>
+    </nav>
+    <br>
+    <form name="Ingreso">
+        
+        <!--
+        <label for="FotoPatente">Foto de la Patente:</label>
+        <input type="file" id="FotoPatente" name="FotoPatente" accept="image/*" capture="environment">
+        <br> -->
+        <label for="Patente">Patente:</label>
+        <input type="text" id="Patente" name="Patente" placeholder="ABCD12">
+        <br>
+        <label for="NombreChofer">Nombre Chofer:</label>
+        <input type="text" id="NombreChofer" name="NombreChofer" placeholder="Juan">
+        <br>
+        <label for="ApellidoPChofer">Apellido Paterno Chofer:</label>
+        <input type="text" id="ApellidoPChofer" name="ApellidoPChofer" placeholder="Perez">
+        <br>
+        <label for="ApellidoMChofer">Apellido Materno Chofer:</label>
+        <input type="text" id="ApellidoMChofer" name="ApellidoMChofer" placeholder="Gomez">
+        <br>
+        <label for="FechaIngreso">Fecha Ingreso:</label>
+        <input type="date" id="FechaIngreso" name="FechaIngreso">
+        <br>
+        <label for="HoraIngreso">Hora Ingreso:</label>
+        <input type="time" id="HoraIngreso" name="HoraIngreso">
+        <br>
+        <br>
+        <label for="Destino">¿A donde se dirige?:</label>
+        <br>
+        <textarea id="Destino" name="Destino" placeholder="Destino"></textarea>
+        <br>
+        <input type="submit" value="Ingresar">
+    </form>
+    <script type="module" src="app.js"></script>
+</body>
+</html>
