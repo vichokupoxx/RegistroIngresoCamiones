@@ -31,6 +31,12 @@
   border-radius: 5px;
 }
 
+#logintitle {
+  text-align: center;
+  margin-top: 20px;
+  color: #1e293b;
+}
+
 #logout {
   background-color: #ef4444;
   border: none;
@@ -42,4 +48,25 @@
 
 #logout:hover {
   background-color: #dc2626;
+}
+
+#loginPage {
+  background-image: url('https://cdn.prod.website-files.com/67f96a3cc0ac98adaa3dd712/680a975b23c74fc211950de5_hero_Sponsoring%20Truck%20Drivers.webp');
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+}
+
+#loginForm {
+  color: #000000;
+  background-color: rgba(75, 189, 255, 0.623);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  gap: 10px;
+  margin-top: 50px;
+  margin-left: 190px;
+  margin-right: 190px;
+  border-radius: 25px;
 }
