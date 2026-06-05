@@ -198,5 +198,13 @@ onAuthStateChanged(auth, (user) => {
       });
     }
   }
+  const toggle = document.querySelector(".menu-toggle");
+  const nav = document.querySelector(".nav-right");
+
+  if (toggle) {
+    toggle.addEventListener("click", () => {
+      nav.classList.toggle("active");
+    });
+  }
 });
 

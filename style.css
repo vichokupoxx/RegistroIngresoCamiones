@@ -1,10 +1,12 @@
 .navbar {
+
   display: flex;
   justify-content: space-between;
   align-items: center;
   background-color: #1e293b;
   color: white;
   padding: 10px 20px;
+  flex-wrap: wrap;
 }
 
 .nav-right {
@@ -13,9 +15,8 @@
   gap: 15px;
 }
 
-.navbar {
-  display: flex;
-  justify-content: space-between;
+.navbar a {
+  text-decoration: none;
 }
 
 .nav-left a {
@@ -31,6 +32,10 @@
   border-radius: 5px;
 }
 
+.navbtn:hover {
+  background-color: #2563eb;
+}
+
 #logout {
   background-color: #ef4444;
   border: none;
@@ -44,6 +49,17 @@
   background-color: #dc2626;
 }
 
+.menu-toggle {
+  display: none;
+  font-size: 24px;
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+}
+
+
+
 #loginPage {
   background-image: url('https://cdn.prod.website-files.com/67f96a3cc0ac98adaa3dd712/680a975b23c74fc211950de5_hero_Sponsoring%20Truck%20Drivers.webp');
   background-size: cover;
@@ -54,6 +70,17 @@
   justify-content: center; /* horizontal */
   align-items: center;     /* vertical */
 }
+
+#RegistrarPage {
+  margin: 0;
+  min-height: 100vh;
+
+  background-image: url('https://cdn.prod.website-files.com/67f96a3cc0ac98adaa3dd712/680a975b23c74fc211950de5_hero_Sponsoring%20Truck%20Drivers.webp');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
 
 #loginForm {
   font-size: clamp(18px, 1.2vw, 25px);
@@ -73,4 +100,119 @@
 #username, #password {
   padding: 10px;
   font-size: inherit;
+}
+
+#loginButton {
+  
+  background-color: #0a2540;
+  border: none;
+  color: rgb(255, 255, 255);
+  padding: 10px 20px;
+  cursor: pointer; 
+  border-radius: 5px;
+  font-size: inherit;
+}
+
+#loginButton:hover {
+  
+  background-color: #103861;
+  border: none;
+  color: rgb(255, 255, 255);
+  padding: 10px 20px;
+  cursor: pointer; 
+  border-radius: 5px;
+  font-size: inherit;
+}
+
+#ingresoForm {
+  display: flex;
+  flex-direction: column;
+}
+
+.container {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: rgba(27, 151, 182, 0.9);
+  border-radius: 12px;
+  max-height: 80vh;
+  max-width: 400px;
+  min-width: 170px;
+  overflow-y: auto;
+}
+
+#userEmail {
+  font-size: 14px;
+  overflow-wrap: break-word;
+}
+
+@media (max-width: 768px) {
+
+  * {
+  box-sizing: border-box;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+
+  .navbar {
+    flex-wrap: nowrap; /* 👈 clave */
+  }
+
+  .nav-left {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    font-size: 13px;
+  }
+
+  /* 👇 oculta los links en mobile */
+  .nav-left a {
+    display: none;
+  }
+
+  .nav-left strong {
+    flex: 1; /* 👈 ocupa el espacio disponible */
+    white-space: nowrap; /* mantiene en una línea */
+  }
+
+  .nav-right {
+    position: absolute;
+    top: 60px;
+    left: 10px; /* 👈 pegado al botón */
+
+    width: 100%;
+    max-width: 240px;
+
+    background-color: #1e293b;
+    flex-direction: column;
+    padding: 10px;
+    gap: 10px;
+
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+
+    display: none;
+
+    opacity: 0;
+    transform: translateY(-10px);
+    transition: all 0.25s ease;
+
+    align-items: stretch; /* 👈 para que los botones ocupen todo el ancho */
+  }
+
+  .nav-right.active {
+      display: flex;
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+  .navbtn, #logout {
+    width: 100%;
+    text-align: left;
+    
+  }
 }
