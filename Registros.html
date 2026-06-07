@@ -1,32 +1,38 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <title>Registros</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Registros</title>
+  <link rel="stylesheet" href="style.css">
 </head>
-<body id="RegistrosPage">
- <!-- 🧭 NAVBAR -->
-    <nav class="navbar">
-    <div class="nav-left">
-        <button class="menu-toggle">☰</button> <!-- 👈 aquí -->
-        <strong>Registros</strong>
+
+<body>
+<div id="app">
+
+  <div class="navbar">
+
+    <div class="menu-toggle" id="menuToggle">☰</div>
+
+    <div class="nav-links" id="navLinks">
+      <a href="Registrar.html">Registrar</a>
+      <a href="Registros.html">Registros</a>
     </div>
 
-    <div class="nav-right">
-        <span id="userEmail"></span>
-        <a class="navbtn" href="Registrar.html">Registrar</a>
-        <a class="navbtn" href="Registros.html">Ver registros</a> 
-        <button id="logout">Cerrar sesión</button>
+    <div class="user-section">
+      <span id="userEmail"></span>
+      <button id="logout">Salir</button>
     </div>
-    </nav>
 
-  <h1>Registros</h1>
+  </div>
 
-  <!-- 📊 CONTENEDOR -->
-  <div id="listaRegistros"></div>
+  <div class="container">
+    <h2>Historial</h2>
+    <div id="listaRegistros"></div>
+  </div>
 
-  <script type="module" src="app.js"></script>
+</div>
+
+<script type="module" src="app.js"></script>
 </body>
 </html>

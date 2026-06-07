@@ -1,218 +1,213 @@
+/* ============================
+   RESET
+============================ */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ============================
+   BODY
+============================ */
+body {
+  font-family: Arial, sans-serif;
+  min-height: 100vh;
+
+  background-image: url("https://cdn.prod.website-files.com/67f96a3cc0ac98adaa3dd712/680a975b23c74fc211950de5_hero_Sponsoring%20Truck%20Drivers.webp");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+/* ============================
+   APP
+============================ */
+#app {
+  min-height: 100vh;
+  background: rgba(0,0,0,0.55);
+  color: white;
+
+  display: flex;
+  flex-direction: column;
+}
+
+/* ============================
+   NAVBAR (FULL WIDTH + FIX Z)
+============================ */
 .navbar {
+  width: 100%;
+  background: rgba(0,0,0,0.95);
 
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #1e293b;
-  color: white;
-  padding: 10px 20px;
-  flex-wrap: wrap;
-}
 
-.nav-right {
-  display: flex;
-  align-items: center;
-  gap: 15px;
-}
+  padding: 12px 20px;
 
-.navbar a {
-  text-decoration: none;
-}
-
-.nav-left a {
-  margin-left: 10px;
-}
-
-.navbtn {
-  background-color: #3b82f6;
-  border: none;
-  color: white;
-  padding: 6px 12px;
-  cursor: pointer;
-  border-radius: 5px;
-}
-
-.navbtn:hover {
-  background-color: #2563eb;
-}
-
-#logout {
-  background-color: #ef4444;
-  border: none;
-  color: white;
-  padding: 6px 12px;
-  cursor: pointer;
-  border-radius: 5px;
-}
-
-#logout:hover {
-  background-color: #dc2626;
+  position: sticky;
+  top: 0;
+  z-index: 9999;
 }
 
 .menu-toggle {
   display: none;
   font-size: 24px;
-  background: none;
-  border: none;
-  color: white;
   cursor: pointer;
 }
 
-
-
-#loginPage {
-  background-image: url('https://cdn.prod.website-files.com/67f96a3cc0ac98adaa3dd712/680a975b23c74fc211950de5_hero_Sponsoring%20Truck%20Drivers.webp');
-  background-size: cover;
-  background-position: center;
-  height: 100vh;
-
+.nav-links {
   display: flex;
-  justify-content: center; /* horizontal */
-  align-items: center;     /* vertical */
+  gap: 20px;
 }
 
-#RegistrarPage {
-  margin: 0;
-  min-height: 100vh;
-
-  background-image: url('https://cdn.prod.website-files.com/67f96a3cc0ac98adaa3dd712/680a975b23c74fc211950de5_hero_Sponsoring%20Truck%20Drivers.webp');
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
+.nav-links a {
+  color: #00aaff;
+  text-decoration: none;
+  font-weight: bold;
 }
 
-
-#loginForm {
-  font-size: clamp(18px, 1.2vw, 25px);
-  color: #000;
-  background-color: rgba(75, 189, 255, 0.623);
+.user-section {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: clamp(20px, 5vh, 60px) clamp(20px, 4vw, 40px);
   gap: 10px;
-  border-radius: 25px;
-  min-width: 300px;
-  max-width: 400px;
-
 }
 
-#username, #password {
-  padding: 10px;
-  font-size: inherit;
-}
-
-#loginButton {
-  
-  background-color: #0a2540;
-  border: none;
-  color: rgb(255, 255, 255);
-  padding: 10px 20px;
-  cursor: pointer; 
-  border-radius: 5px;
-  font-size: inherit;
-}
-
-#loginButton:hover {
-  
-  background-color: #103861;
-  border: none;
-  color: rgb(255, 255, 255);
-  padding: 10px 20px;
-  cursor: pointer; 
-  border-radius: 5px;
-  font-size: inherit;
-}
-
-#ingresoForm {
-  display: flex;
-  flex-direction: column;
-}
-
-.container {
-  max-width: 600px;
-  margin: 0 auto;
-  padding: 20px;
-  background-color: rgba(27, 151, 182, 0.9);
-  border-radius: 12px;
-  max-height: 80vh;
-  max-width: 400px;
-  min-width: 170px;
-  overflow-y: auto;
-}
-
-#userEmail {
-  font-size: 14px;
-  overflow-wrap: break-word;
-}
-
-@media (max-width: 768px) {
-
-  * {
-  box-sizing: border-box;
-  }
+/* ============================
+   MOBILE NAV
+============================ */
+@media (max-width: 600px) {
 
   .menu-toggle {
     display: block;
   }
 
-  .navbar {
-    flex-wrap: nowrap; /* 👈 clave */
-  }
-
-  .nav-left {
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 10px;
-    font-size: 13px;
-  }
-
-  /* 👇 oculta los links en mobile */
-  .nav-left a {
+  .nav-links {
     display: none;
-  }
-
-  .nav-left strong {
-    flex: 1; /* 👈 ocupa el espacio disponible */
-    white-space: nowrap; /* mantiene en una línea */
-  }
-
-  .nav-right {
-    position: absolute;
-    top: 60px;
-    left: 10px; /* 👈 pegado al botón */
-
-    width: 100%;
-    max-width: 240px;
-
-    background-color: #1e293b;
     flex-direction: column;
-    padding: 10px;
-    gap: 10px;
 
-    border-radius: 12px;
-    box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+    position: fixed;
+    top: 60px;
+    left: 0;
+    width: 100%;
 
-    display: none;
+    background: rgba(0,0,0,0.98);
+    padding: 20px;
 
-    opacity: 0;
-    transform: translateY(-10px);
-    transition: all 0.25s ease;
-
-    align-items: stretch; /* 👈 para que los botones ocupen todo el ancho */
+    z-index: 10000;
   }
 
-  .nav-right.active {
-      display: flex;
-      opacity: 1;
-      transform: translateY(0);
-    }
+  .nav-links.active {
+    display: flex;
+  }
+}
 
-  .navbtn, #logout {
-    width: 100%;
-    text-align: left;
-    
+/* ============================
+   CONTENIDO
+============================ */
+.container {
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+
+  padding: 20px;
+
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+/* ============================
+   LOGIN CENTRADO
+============================ */
+.main-content {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+/* ============================
+   FORM
+============================ */
+form {
+  width: 100%;
+  max-width: 520px;
+
+  background: rgba(255,255,255,0.1);
+  backdrop-filter: blur(8px);
+
+  padding: 40px 30px;
+  border-radius: 12px;
+
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+/* ============================
+   INPUTS
+============================ */
+input, select, button {
+  padding: 14px;
+  border-radius: 6px;
+  border: none;
+  font-size: 1em;
+}
+
+input, select {
+  background: #fff;
+  color: #000;
+}
+
+/* ============================
+   BOTONES
+============================ */
+button {
+  background: #007bff;
+  color: white;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+button:hover {
+  background: #0056b3;
+}
+
+/* ============================
+   REGISTROS FULL WIDTH REAL
+============================ */
+#listaRegistros {
+  width: 100%;
+
+  background: rgba(255,255,255,0.1);
+  padding: 20px;
+  border-radius: 10px;
+}
+
+#listaRegistros div {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+
+  gap: 10px;
+  padding: 12px 0;
+
+  border-bottom: 1px solid rgba(255,255,255,0.2);
+}
+
+/* ============================
+   MOBILE FIX
+============================ */
+@media (max-width: 480px) {
+
+  .container {
+    padding: 10px;
+  }
+
+  form {
+    max-width: 100%;
+    padding: 30px 20px;
   }
 }
