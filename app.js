@@ -201,7 +201,7 @@ onAuthStateChanged(auth, async (user) => {
           try {
 
             const data = {
-              patente: document.getElementById("Patente")?.value || "",
+              patente: document.getElementById("Patente")?.value.toUpperCase().trim() || "",
               nombre: document.getElementById("NombreChofer")?.value || "",
               apellidoP: document.getElementById("ApellidoPChofer")?.value || "",
               apellidoM: document.getElementById("ApellidoMChofer")?.value || "",
